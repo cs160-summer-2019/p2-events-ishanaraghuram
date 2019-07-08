@@ -32,6 +32,7 @@
 				<div class="shape-container">
 					<!-- Dynamically add your circles here! -->
 					<!-- Example circle: <div class="p2-circle bg-blue"></div> -->
+          
 				</div>
 			</div>
 		</div>
@@ -39,6 +40,18 @@
 
 
 <script type="text/javascript">
+
+function makeBubbles() {
+  $(".shape-container").append("<div class='p2-circle bg-blue'></div>");
+}
+makeBubbles();
+var myVar = setInterval(makeBubbles, 1000);
+ 
+$('.btn.btn-light.float-right').on('click', stopBubbles);
+function stopBubbles() {
+  clearInterval(myVar);
+}
+
 
 	// your solution here
 
